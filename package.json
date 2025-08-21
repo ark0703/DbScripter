@@ -1,0 +1,28 @@
+
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "pg-customer-ingest",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "Stream customer data from CSV/JSON/XML/SQL into Postgres with column mapping and UPSERT.",
+  "bin": {
+    "ingest-customers": "./ingest-customers.mjs"
+  },
+  "scripts": {
+    "ingest": "node ingest-customers.mjs --help",
+    "insert": "node ingest-customers.mjs ./files/users_users.csv --table customers --infer-types --mapping mapping.customers.json --unique-key email"
+  },
+  "dependencies": {
+    "csv-parse": "^5.5.6",
+    "dotenv": "^16.4.5",
+    "fast-glob": "^3.3.2",
+    "pg": "^8.12.0",
+    "stream-json": "^1.8.0",
+    "saxes": "^6.0.0",
+    "yargs": "^17.7.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

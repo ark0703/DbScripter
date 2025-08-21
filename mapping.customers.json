@@ -1,0 +1,56 @@
+{
+  "rename": {
+    "Email": "email",
+    "billing_email": "email",
+
+    "first_name": "first_name",
+    "billing_first_name": "first_name",
+
+    "last_name": "last_name",
+    "billing_last_name": "last_name",
+
+    "billing_phone": "phone",
+    "shipping_phone": "phone",
+
+    "home_country": "country",
+    "billing_country": "country",
+    "country_name": "country",
+
+    "birthday_field": "dob",
+
+    "profile_photo": "profile_picture",
+    "wp_user_avatar": "profile_picture",
+    "image_profile": "profile_picture",
+    "_image_profile": "profile_picture",
+    "mobile_img_profile": "profile_picture",
+    "image": "profile_picture",
+
+    "firebase_uid": "firebase_uid",
+    "_firebase_uid": "firebase_uid",
+
+    "last_update": "updated_at"
+  },
+
+  "select": [
+    "first_name",
+    "last_name",
+    "email",
+    "phone",
+    "dob",
+    "country",
+    "profile_picture",
+    "firebase_uid",
+    "updated_at"
+  ],
+
+  "defaults": {
+    "is_active": true,
+    "preferred_currency": "USD"
+  },
+
+  "coerce": {
+    "dob": "date",
+    "updated_at": "timestamp",
+    "created_at": "timestamp"
+  }
+}
